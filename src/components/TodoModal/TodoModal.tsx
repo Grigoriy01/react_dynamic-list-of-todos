@@ -22,6 +22,8 @@ export const TodoModal: React.FC<Props> = ({
   //#endregion states
 
   useEffect(() => {
+    if (!selectedTodo) return;
+
     setIsLoading(true);
     setIsError(null);
 
